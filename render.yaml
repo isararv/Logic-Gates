@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: logic-gates
+    runtime: node
+    plan: free
+    buildCommand: npm run check
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: LOGIC_TEACHER_PASSWORD
+        sync: false
